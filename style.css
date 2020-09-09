@@ -1,0 +1,375 @@
+body {
+  font-family: 'Ewert';
+  background-color: #ee8383;
+  background-image: url("./bg-1.png");
+  background-repeat: no-repeat;
+  background-position-x:left;
+  background-position-y: top;
+  background-size:100%;
+  overflow-y:hidden;
+}
+#game-board div{
+  font-family: 'Dekko';
+  font-size: 60px;
+  border:5px solid black;
+  color:#ee8383;
+  background-color:#ee8383 ;
+  cursor: pointer;
+}
+#game-header{
+  font-size:70px;
+  font-weight: 400;
+  color:#000102;
+  text-shadow: 1px 1px 4px red;
+}
+#player-1,#player-2{
+  font-family: 'Dekko';
+  font-size: 40px;
+  font-weight: 700;
+}
+#game-button{
+  font-size: xx-large;
+}
+#game-result{
+  position: absolute;
+  top: 30%;
+}
+#result-win #result-win-1{
+  animation: winResult1 0.5s linear;
+}
+#result-win #result-win-2{
+  animation: winResult2 0.5s linear;
+}
+#result-lose #result-lose-1{
+  animation: loseResult1 0.5s linear;
+}
+#result-lose #result-lose-2{
+  animation: loseResult2 0.5s linear;
+}
+
+#result-tie #result-tie-1{
+  animation: tieResult1 0.5s linear;
+}
+#result-tie #result-tie-2{
+  animation: tieResult2 0.5s linear;
+}
+
+#result-win-1{
+  position: absolute;
+        left:25%;
+  background-color: #82aeff;
+  border-radius: 10px 0px 0px 10px;
+}
+#result-win-2{
+  position: absolute;
+  background-color: #82aeff;
+  right:25%;
+  border-radius: 0px 10px 10px 0px;
+}
+#result-lose-1{
+  position: absolute;
+  left:25%;
+  background-color: #ff0000;
+  border-radius: 10px 0px 0px 10px;
+}
+#result-lose-2{
+  position: absolute;
+  background-color: #ff0000;
+  right:25%;
+  border-radius: 0px 10px 10px 0px;
+}
+
+#result-tie-1{
+  position: absolute;
+  left:25%;
+  background-color: #d8eb30;
+  border-radius: 10px 0px 0px 10px;
+}
+#result-tie-2{
+  position: absolute;
+  background-color: #d8eb30;
+  right:25%;
+  border-radius: 0px 10px 10px 0px;
+}
+
+@keyframes winResult1{
+          0%{
+    left: -50%;
+    opacity: 0;
+          }
+  50%{
+    left: -10%;
+    opacity: 0.5;
+  }
+          100%{
+    left: 25%;
+    opacity: 1;
+          }
+        }
+  @keyframes winResult2{
+          0%{
+    right: -50%;
+    opacity: 0;
+          }
+  50%{
+    right: -10%;
+    opacity: 0.5;
+  }
+          100%{
+    right: 25%;
+    opacity: 1;
+          }
+        }
+  @keyframes loseResult1{
+          0%{
+    left: -50%;
+    opacity: 0;
+          }
+  50%{
+    left: -10%;
+    opacity: 0;
+  }
+          100%{
+    left: 25%;
+    opacity: 1;
+          }
+        }
+  @keyframes loseResult2{
+          0%{
+    right: -50%;
+    opacity: 0;
+          }
+  50%{
+    right: -10%;
+    opacity: 0;
+  }
+          100%{
+    right: 25%;
+    opacity: 1;
+          }
+        }
+  @keyframes tieResult1{
+          0%{
+    left: -50%;
+    opacity: 0;
+          }
+  50%{
+    left: -10%;
+    opacity: 0;
+  }
+          100%{
+    left: 25%;
+    opacity: 1;
+          }
+        }
+  @keyframes tieResult2{
+          0%{
+    right: -50%;
+    opacity: 0;
+          }
+  50%{
+    right: -10%;
+    opacity: 0;
+  }
+          100%{
+    right: 25%;
+    opacity: 1;
+          }
+        }
+  @keyframes shake{
+    0%{
+      margin-left:-5px;
+    }
+    50%{
+      margin-left: 0px;
+    }
+    100%{
+      margin-left: 5px;
+    }
+  }
+  #player-info{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    top:30%;
+    border-width: 20px;
+    border-style: groove;
+    left:30%;
+  }
+  #player-info div input:focus{
+    outline: 0;
+    box-shadow: none;
+  }
+  .shake{
+    animation: shake 0.1s linear 6 alternate;
+  }
+  #player-info .greeting{
+    font-family: 'Ewert';
+    font-size:30px;
+    text-shadow: 2px 2px 2px blue;
+  }
+  @media screen and (max-width:780px) {
+    body{
+      background-image: url('./bg-3.png');
+      background-repeat: repeat-y;
+    }
+    #player-info{
+      left:10%;
+    }
+
+    #game-header{
+        font-size:45px;
+        font-weight: 400;
+    }
+    #game-button{
+      font-size:large;
+    }
+    #player-1,#player-2,#player-3{
+    font-family: 'Dekko';
+    font-size: 30px;
+    font-weight: 700;
+    }
+    #result-tie #result-tie-1{
+      animation: tieResult1 0.5s linear;
+    }
+    #result-tie #result-tie-2{
+      animation: tieResult2 0.5s linear;
+    }
+    
+    #result-tie-1{
+      position: absolute;
+      left:8.4%;
+      background-color: #d8eb30;
+      border-radius: 10px 0px 0px 10px;
+    }
+    #result-tie-2{
+      position: absolute;
+      background-color: #d8eb30;
+      right:8.4%;
+      border-radius: 0px 10px 10px 0px;
+    }
+
+    @keyframes tieResult1{
+      0%{
+        left: -20%;
+        opacity: 0;
+      }
+      50%{
+        left: -8.4%;
+        opacity: 0;
+      }
+      100%{
+        left: 8.4%;
+        opacity: 1;
+      }
+    }
+    @keyframes tieResult2{
+      0%{
+        right: -20%;
+        opacity: 0;
+      }
+      50%{
+        right: -8.4%;
+        opacity: 0;
+      }
+      100%{
+        right: 8.4%;
+        opacity: 1;
+      }
+    }
+    #result-win #result-win-1{
+      animation: winResult1 0.5s linear;
+    }
+    #result-win #result-win-2{
+      animation: winResult2 0.5s linear;
+    }
+    
+    #result-win-1{
+      position: absolute;
+      left:8.4%;
+      background-color: #82aeff;
+      border-radius: 10px 0px 0px 10px;
+    }
+    #result-win-2{
+      position: absolute;
+      background-color: #82aeff;
+      right:8.4%;
+      border-radius: 0px 10px 10px 0px;
+    }
+
+    @keyframes winResult1{
+      0%{
+        left: -20%;
+        opacity: 0;
+      }
+      50%{
+        left: -8.4%;
+        opacity: 0;
+      }
+      100%{
+        left: 8.4%;
+        opacity: 1;
+      }
+    }
+    @keyframes winResult2{
+      0%{
+        right: -20%;
+        opacity: 0;
+      }
+      50%{
+        right: -8.4%;
+        opacity: 0;
+      }
+      100%{
+        right: 8.4%;
+        opacity: 1;
+      }
+    }
+    #result-lose #result-lose-1{
+      animation: loseResult1 0.5s linear;
+    }
+    #result-lose #result-lose-2{
+      animation: loseResult2 0.5s linear;
+    }
+    
+    #result-lose-1{
+      position: absolute;
+      left:8.4%;
+      background-color:#ff0000;
+      border-radius: 10px 0px 0px 10px;
+    }
+    #result-lose-2{
+      position: absolute;
+      background-color: #ff0000;
+      right:8.4%;
+      border-radius: 0px 10px 10px 0px;
+    }
+
+    @keyframes loseResult1{
+      0%{
+        left: -20%;
+        opacity: 0;
+      }
+      50%{
+        left: -8.4%;
+        opacity: 0;
+      }
+      100%{
+        left: 8.4%;
+        opacity: 1;
+      }
+    }
+    @keyframes loseResult2{
+      0%{
+        right: -20%;
+        opacity: 0;
+      }
+      50%{
+        right: -8.4%;
+        opacity: 0;
+      }
+      100%{
+        right: 8.4%;
+        opacity: 1;
+      }
+    }
+
+  }
