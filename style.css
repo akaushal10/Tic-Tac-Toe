@@ -56,7 +56,7 @@ body {
 
 #result-win-1{
   position: absolute;
-        left:25%;
+  left:25%;
   background-color: #82aeff;
   border-radius: 10px 0px 0px 10px;
 }
@@ -99,11 +99,11 @@ body {
           }
   50%{
     left: -10%;
-    opacity: 0.5;
+    opacity: 1;
   }
           100%{
     left: 25%;
-    opacity: 1;
+    opacity: 0;
           }
         }
   @keyframes winResult2{
@@ -113,11 +113,11 @@ body {
           }
   50%{
     right: -10%;
-    opacity: 0.5;
+    opacity: 1;
   }
           100%{
     right: 25%;
-    opacity: 1;
+    opacity: 0;
           }
         }
   @keyframes loseResult1{
@@ -214,10 +214,19 @@ body {
     #player-info{
       left:10%;
     }
-
+    #game-board div{
+      font-family: 'Dekko';
+      font-size: 45px;
+      border:5px solid black;
+      color:#ee8383;
+      background-color:#ee8383 ;
+      cursor: pointer;
+    }
     #game-header{
-        font-size:45px;
+        font-size:40px;
         font-weight: 400;
+        padding-left:0;
+        padding-right:0;
     }
     #game-button{
       font-size:large;
@@ -287,13 +296,15 @@ body {
       left:8.4%;
       background-color: #82aeff;
       border-radius: 10px 0px 0px 10px;
+      font-size: 30px;
     }
     #result-win-2{
       position: absolute;
       background-color: #82aeff;
       right:8.4%;
       border-radius: 0px 10px 10px 0px;
-    }
+      font-size: 30px;
+    }    
 
     @keyframes winResult1{
       0%{
