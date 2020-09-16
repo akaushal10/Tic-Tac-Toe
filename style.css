@@ -6,7 +6,6 @@ body {
   background-position-x:left;
   background-position-y: top;
   background-size:100%;
-  overflow-y:hidden;
 }
 #game-board div{
   font-family: 'Dekko';
