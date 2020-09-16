@@ -31,7 +31,7 @@
   }
     </style>
   </head>
-  <body class="container-fluid">
+  <body style="overflow-x: hidden;overflow-y: hidden;" class="container-fluid">
     <div class="row">
       <div id="game-header" class="col-12 text-center mx-auto row my-4 my-md-1">
         <span class="mx-auto col-md-5 col-12">TIC TAC TOE</span>
@@ -49,7 +49,7 @@
         <div id="d2" style="border-top:10px solid black;" class="col-4 py-2 px-4">N</div>
         <div id="d3" style="border-top:10px solid black;border-right:10px solid black;" class="col-4 py-2 px-4">N</div>
         <div id="d4" style="border-left:10px solid black;" class="col-4 py-2 px-4">N</div>
-        <div id="d5" style="" class="col-4 py-2 px-4">N</div>
+        <div id="d5"  class="col-4 py-2 px-4">N</div>
         <div id="d6" style="border-right:10px solid black;" class="col-4 py-2 px-4">N</div>
         <div id="d7" style="border-bottom:10px solid black;border-left:10px solid black;" class="col-4 py-2 px-4">N</div>
         <div id="d8" style="border-bottom:10px solid black;" class="col-4 py-2 px-4">N</div>
@@ -85,6 +85,7 @@
             </table>
           </div>  
         </div>
+        
         <div id="" class="d-none result-2">
           <div id="result-lose-1" class="col-5 col-md-3 display-1 py-5 text-right">YOU L</div>
           <div id="result-lose-2" style="margin-left: 0px;" class="col-5 col-md-3 display-1 py-5">
@@ -152,7 +153,7 @@
           if(username.length!=0 && username.match(/^[0-9a-zA-Z\s]+$/)){
             localStorage.setItem('username',username);
             $("#player-info").addClass('d-none');
-            $("#player-1 .player-name").html(username);
+            $("#player-1 .player-name").html(`${username.split(" ")[0]}`);
           }else{
             $('.username-valid').removeClass('d-none').addClass('shake');
             await sleep(2000);
@@ -193,7 +194,8 @@
         if(!localStorage.getItem('username')){
           return false;
         }else{
-          $("#player-1 .player-name").html(`${localStorage.getItem('username')}`);
+         var username = localStorage.getItem('username').split(" ")[0]
+          $("#player-1 .player-name").html(`${username}`);
           return true;
         }
       }
